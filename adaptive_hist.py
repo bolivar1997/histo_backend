@@ -57,7 +57,7 @@ def fit_kmeans(slide_path, colors, tiles_shape):
     return kmeans
 
 
-def gen_data(slide_path, img_shape):
+def predict(slide_path, img_shape):
     obj = openslide.OpenSlide(slide_path)
 
     count = 0
@@ -75,4 +75,4 @@ def gen_data(slide_path, img_shape):
 if __name__ == '__main__':
     kmeans = fit_kmeans('180458_19.svs', 16, (1000, 1000))
 
-    gen_data('180458_19.svs', (1000, 1000))
+    predict('180458_19.svs', (1000, 1000))
